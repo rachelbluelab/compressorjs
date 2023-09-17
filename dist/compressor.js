@@ -5,7 +5,7 @@
  * Copyright 2018-present Chen Fengyuan
  * Released under the MIT license
  *
- * Date: 2023-02-28T14:09:41.732Z
+ * Date: 2023-09-17T05:50:01.085Z
  */
 
 (function (global, factory) {
@@ -744,7 +744,7 @@
             _this.fail(new Error('Aborted to read the image with FileReader.'));
           };
           reader.onerror = function () {
-            _this.fail(new Error('Failed to read the image with FileReader.'));
+            _this.fail(reader.error ? reader.error : new Error('Failed to read the image with FileReader.'));
           };
           reader.onloadend = function () {
             _this.reader = null;
